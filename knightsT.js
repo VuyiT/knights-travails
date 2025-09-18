@@ -45,7 +45,7 @@ function knightMoves(start, end) {
                     const currentKey = `${current[0]}, ${current[1]}`;
                     current = parentMap.get(currentKey);
                 }
-                console.log(`You made it in ${moveCount} moves! Here's your path:`);
+                console.log(`You made it in ${moveCount - 1} moves! Here's your path:`);
                 return path.reverse();
                 }
             }
@@ -53,3 +53,8 @@ function knightMoves(start, end) {
     }
     return [];
 }
+
+const test = knightMoves([0, 0], [7, 7]);
+console.log(test);
+const test2 = knightMoves([3, 3], [4, 3]);
+console.log(test2);
